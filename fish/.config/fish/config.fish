@@ -4,6 +4,7 @@ set fish_greeting ""        # Disable the fish greeting
 
 # }}}
 # ALIASES ------------------------------------------------------------------ {{{
+alias tmux "env TERM=xterm-256color tmux"
 
 function take; mkdir -p $argv; cd $argv; end
 
