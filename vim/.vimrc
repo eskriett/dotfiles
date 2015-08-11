@@ -131,7 +131,7 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'SirVer/ultisnips'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 
 " All of Plugins must be added before the following line
 call vundle#end()
