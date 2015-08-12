@@ -18,21 +18,7 @@ manually maintaining symlinks.
 
 ## Installation
 
-In order for this installation to work, you need to install GNU stow:
-
-Debian/Ubuntu
-```
-sudo apt-get update
-sudo apt-get install stow
-```
-
-REHL/Fedora/CentOS
-```
-sudo yum update
-sudo yum install stow
-```
-
-Once `stow` is installed, symlinking the dotfiles is as simple as
+To install both the dotfiles and my frequently used command line utilities simply use:
 ```
 cd dotfiles
 make
