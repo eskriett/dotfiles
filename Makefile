@@ -10,15 +10,22 @@ STOW-UNINSTALL = $(STOW-CMD) -D
 BASEPKGS = fish git vim
 
 # Programs to install
-BASEPROGS = stow vim tig curl git tmux
+BASEPROGS = stow fish vim tig curl git tmux
 
 # List fictional targets
-.PHONY: install clean
+.PHONY: yum apt install clean
 
-install:
+yum:
+	sudo yum update
+	sudo yum install $(BASEPROGS)
+	make install
+
+apt:
 	sudo apt-get update
 	sudo apt-get install $(BASEPROGS)
+	make install
 
+install:
 	# Install dot files
 	$(STOW-INSTALL) $(BASEPKGS)
 
