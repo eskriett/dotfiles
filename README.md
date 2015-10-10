@@ -18,26 +18,14 @@ manually maintaining symlinks.
 
 ## Installation
 
-To install the base packages either use `make apt` or `make yum`.
-
 To symlink the dotfiles simply use:
 ```
 cd dotfiles
-make install
+stow --target ~ -R git vim tmux
 ```
 
-Alternatively, if you only wish to setup links for specific configuration files,
-e.g. vim then you can use:
+To install the plugins for vim using Vundle run:
 ```
-cd dotfiles
-stow vim
-```
-
-## Uninstallation
-
-To remove the dotfiles, you can simply run:
-
-```
-cd dotfiles
-make clean
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 ```
