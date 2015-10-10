@@ -13,6 +13,7 @@ set synmaxcol=800       " don't highlight lines longer than 800 characters
 set ttyfast             " use a fast terminal connection
 set visualbell          " use a visual bell instead of annoying beep
 set title               " update the terminal title with file name
+set titleold=           " Don't set the title to 'Thanks for flying Vim' when exiting
 
 set hidden              " Allow buffers to exist in the background
 
