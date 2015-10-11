@@ -29,3 +29,9 @@ To install the plugins for vim using Vundle run:
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
+
+## Suggestions
+
+I strive to make my configuration files easy to understand. If you think there
+is potential to make them clearer, or if I have used an outdated method for
+changing a setting, then please open an issue or submit a pull request.
