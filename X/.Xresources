@@ -2,6 +2,9 @@
 URxvt.iso14755:         false
 URxvt.iso14755_52:      false
 
+! Set urgency hint
+URxvt.urgentOnBell:     true
+
 ! Switch off borders
 URxvt.borderless:       true
 
