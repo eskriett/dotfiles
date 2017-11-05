@@ -1,0 +1,36 @@
+! Set the font
+URxvt.font:           xft:Hack:size=9
+URxvt.boldFont:       xft:Hack:bold:size=9
+URxvt.italicFont:     xft:Hack:italic:size=9
+URxvt.boldItalicFont: xft:Hack:bold:italic:size=9
+
+! Disable ctrl+shift functionality
+URxvt.iso14755:    false
+URxvt.iso14755_52: false
+
+! Set urgency hint
+URxvt.urgentOnBell: true
+
+! Switch off borders
+URxvt.borderless: true
+
+! Disable the scroll bar
+URxvt.scrollBar: false
+
+! Disable Scrollback buffer in secondary screen (e.g. less)
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
+
+! Skip scrolling when receiving lots of lines
+URxvt.skipScroll: true
+
+! Save 10,000 lines in scrollback buffer
+URxvt.saveLines: 10000
+
+! Enable extensions:
+! matcher - enable matching strings in output (URLs)
+! selection-to-clipboard - copy the selection to the system clipboard
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+
+! Underline matcher strings (URLs)
+URxvt.matcher.rend.0: Uline
