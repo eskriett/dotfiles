@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Pause dunst notifications
+killall -SIGUSR1 dunst
+
+# Take a screenshot
+IMAGE=/tmp/i3lock.png
+SCREENSHOT="scrot $IMAGE"
+
+$SCREENSHOT
+convert $IMAGE -scale 5% -scale 2000% $IMAGE
+
+LOCK="i3lock -e -n -u -i $IMAGE"
+
+if [[ $(playerctl status) == Playing ]]; then
+    # Pause the music
+    playerctl pause
+
+    $LOCK
+
+    # Resume the music
+    playerctl play
+else
+    $LOCK
+fi
+
+# Remove the lockscreen image
+rm $IMAGE
+
+# Unpause the dunst notifications
+killall -SIGUSR2 dunst
