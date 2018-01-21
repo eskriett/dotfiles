@@ -164,3 +164,4 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Startup
 exec --no-startup-id feh --bg-fill "$HOME/.background.png"
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
