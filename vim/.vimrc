@@ -13,6 +13,7 @@ else
   call minpac#add('ctrlpvim/ctrlp.vim')
   call minpac#add('godlygeek/tabular')
   call minpac#add('itchyny/lightline.vim')
+  call minpac#add('junegunn/fzf.vim')
   call minpac#add('k-takata/minpac')
   call minpac#add('sheerun/vim-polyglot')
   call minpac#add('tpope/vim-commentary')
@@ -23,6 +24,8 @@ endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+
+set rtp+=~/.fzf
 
 " GENERAL {{{1
 
@@ -81,15 +84,20 @@ set foldmethod=marker   " use fold markers for folding
 
 set backspace=2
 
+" Simplify split navigation
+noremap <silent> <leader>s :split<CR>
+noremap <silent> <leader>v :vsplit<CR>
+noremap <silent> <leader>q :close<CR>
+
 " Stop using the cursor keys once and for all! (Unbind them)
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" noremap <up> <nop>
+" noremap <down> <nop>
+" noremap <left> <nop>
+" noremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 " ADVANCED OPTIONS {{{1
 
@@ -98,6 +106,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Resize splits when the window is resized
 autocmd VimResized * :wincmd =
+
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+      \| exe "normal! g'\"" | endif
+endif
 
 " Highlight VCS conflicts
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
