@@ -11,6 +11,7 @@ else
   call minpac#init()
   call minpac#add('chriskempson/base16-vim')
   call minpac#add('ctrlpvim/ctrlp.vim')
+  call minpac#add('fatih/vim-go')
   call minpac#add('godlygeek/tabular')
   call minpac#add('itchyny/lightline.vim')
   call minpac#add('junegunn/fzf.vim')
@@ -19,6 +20,7 @@ else
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('tpope/vim-surround')
+  call minpac#add('w0rp/ale')
   call minpac#add('wellle/targets.vim')
 endif
 
