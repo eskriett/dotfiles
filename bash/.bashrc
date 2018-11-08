@@ -10,6 +10,9 @@ export TERMINAL='urxvt'
 alias ls='ls --color'
 alias open=xdg-open
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Load Xresouces
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
