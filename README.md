@@ -1,7 +1,6 @@
 # Installation
 
 ```
-git submodule init
-git submodule update
+git submodule update --init
 stow --target ~ -R git vim tmux ...
 ```
